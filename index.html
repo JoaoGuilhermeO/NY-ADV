@@ -1,198 +1,127 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
-    <link rel="icon" href="assets/img/logo1.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Advogada Natália Yamao - Especializada em Direito Civil e Penal. Oferecemos orientação jurídica de alta qualidade em questões cíveis, trabalhistas, familiares, de consumo e sucessórias. Agende uma consulta hoje mesmo!">
-    <meta name="keywords"
-        content="Advogada, Natália Yamao, Direito Civil, Direito Penal, Orientação Jurídica, Consulta Jurídica, Cível, Trabalhista, Família, Consumidor, Sucessório">
-    <meta name="author" content="Natália Yamao">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta property="og:image" content="http://advnataliayamao.free.nf/logo1.jpeg" />
-    <script src="https://kit.fontawesome.com/66712e83f7.js" crossorigin="anonymous"></script>
-    <title>Natália Yamao ADV</title>
+    <link rel="shortcut icon" href="assets/img/logo1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:wght@100&family=PT+Sans&family=Playfair+Display&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="assets/js/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <title>Projeto Advocacia</title>
 </head>
 
 <body>
     <header>
-        <div id="logo">
-            <img src="assets/img/advnatwhite.png" alt="Logotipo do Natália Yamao ADV">
+        <div class="logo1">
+            <img src="assets/img/advnatwhite.png" alt="">
         </div>
         <nav>
             <ul>
                 <li><a href="#home">HOME</a></li>
-                <li><a href="#sobre">SOBRE MIM</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
                 <li><a href="#areas-de-atuacao">ÁREAS DE ATUAÇÃO</a></li>
-                <li><a href="#avaliacao">AVALIAÇÕES</a></li>
-                <li><a href="#formulario">CONTATO</a></li>
-                <li class="marcar-horario" style="background-color: #CCA571;">
-                    <a href="#formulario" style="color: #12161E;">MARCAR UM HORÁRIO</a>
-                </li>
+                <li><a href="#depoimentos">DEPOIMENTOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
             </ul>
+            <div id="mobile-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
-        <div id="contact-info">
-            <p>Email: <a href="mailto:adv.nataliayamao@gmail.com" style="text-decoration: none;">adv.nataliayamao@gmail.com</a></p>
-            <p>Telefone: <a href="tel:+554497396256" style="text-decoration: none;">(44) 9739-6256</a></p>
-        </div>
     </header>
-    <section id="home">
-        <div class="column left">
-            <h3>Escritório Jurídico</h3>
-            <h1>Natália Yamao</h1>
-            <p>Sua melhor escolha para serviços jurídicos de qualidade.</p>
-            <a class="button marcar-horario" href="#formulario">Marcar um horário</a>
-        </div>
-        <div class="column right">
-            <img src="assets/img/IMG_98252.png" alt="Foto de Natália Yamao" style="width: 400px; height: 500px;">
+    <section class="home" id="home">
+        <div class="background-image"></div>
+        <div class="content">
+            <div class="left-content">
+                <h3>Escritório de Advocacia</h3>
+                <h1>Natália Yamao</h1>
+                <p>Sua melhor escolha para serviços jurídicos de qualidade.</p>
+                <p><a href="#contato">Marcar um horário</a></p>
+            </div>
+            <!-- <div class="right-content">
+                <img src="IMG_98252.png" alt="Foto">
+            </div> -->
         </div>
     </section>
-    <section id="areas-de-atuacao" class="section">
-        <h2>Áreas de Atuação</h2>
-        <div class="area-cards">
-            <div class="area-card">
-                <h3>Trabalhista</h3><br>
-                <p>O Direito Trabalhista trata das relações entre empregadores e empregados. Isso inclui questões
-                    relacionadas a contratos de trabalho, demissões, horas extras, entre outros aspectos.</p>
+    <section class="sobre" id="sobre">
+        <section class="about" id="sobre">
+            <div class="container">
+                <div class="about-content">
+                    <img src="assets/img/IMG_98252.png" alt="Advogada">
+                    <div class="presentation">
+                        <h1 class="tt">Natália Yamao</h1><br>
+                        <p>
+                            Conheça a advocacia de excelência de Natália Cristina Yamao, OAB/PR 119.910. Com uma
+                            especialização em Direito de Família e Sucessório em andamento, oferece serviços jurídicos
+                            sólidos e focados nas áreas trabalhista, cível, sucessório, consumidor e família. Sua paixão
+                            pelo direito e comprometimento com os clientes resultam em soluções precisas e
+                            personalizadas para cada caso. Conte com uma advogada dedicada e profissional para cuidar
+                            dos seus interesses. Seja bem-vindo à advocacia que valoriza a confiança e a justiça!
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="area-card">
-                <h3>Cível</h3><br>
-                <p>O Direito Cível envolve litígios entre indivíduos e organizações. Isso abrange áreas como
-                    responsabilidade civil, contratos, danos morais e familiares, entre outros.</p>
-            </div>
-            <div class="area-card">
-                <h3>Família</h3><br>
-                <p>O Direito de Família lida com questões relacionadas à família, como divórcio, pensão alimentícia,
-                    guarda de crianças, adoção e casamento.</p>
-            </div>
-            <div class="area-card">
-                <h3>Consumidor</h3><br>
-                <p>O Direito do Consumidor protege os direitos dos consumidores em transações comerciais. Isso inclui
-                    práticas comerciais desleais, produtos defeituosos e contratos de consumo.</p>
-            </div>
-            <div class="area-card">
-                <h3>Sucessório</h3><br>
-                <p>O Direito Sucessório trata da transferência de bens e propriedades após a morte de alguém. Isso
-                    envolve questões de herança, testamentos e partilha de bens.</p>
+        </section>
+    </section>
+    <section class="areas-de-atuacao" id="areas-de-atuacao">
+        <div>
+            <div>
+                <div>
+                    <h1>EM CONSTRUÇÃO</h1>
+                </div>
             </div>
         </div>
     </section>
-    <section id="avaliacao" class="section">
-        <h2> DEPOIMENTOS DE CLIENTES </h2>
-        <div class="testimonial-card">
-            <img src="assets/img/perso1.jpeg" alt="Foto do Cliente 1">
-            <p class="client-name">Maria Silva</p>
-            <p class="testimonial">"Excelente serviço! A Advogada Natália Yamao resolveu meu caso de form a rápida e
-                eficiente. Recomendo muito!""</p>
-        </div>
-        <div class="testimonial-card">
-            <img src="assets/img/person2.jpeg" alt="Foto do Cliente 2">
-            <p class="client-name">Ana Santos</p>
-            <p class="testimonial">"Estou extremamente satisfeito com o trabalho da Advogada Natália. Ela foi muito
-                atenciosa e me guiou em cada etapa do processo."
-        </div>
-        <div class="testimonial-card">
-            <img src="assets/img/person3.jpeg" alt="Foto do Cliente 2">
-            <p class="client-name">Laura Ferreira</p>
-            <p class="testimonial">"A Natália Yamao é uma advogada incrível! Ela conseguiu um resultado que eu nem
-                imaginava ser possível. Obrigado!"</p>
+    <section class="depoimentos" id="depoimentos">
+        <div>
+            <h1>EM CONSTRUÇÃO</h1>
         </div>
     </section>
-    <section class="formulario" id="formulario">
-        <div class="formulario-container">
-            <h2>Entre em Contato</h2>
+    <section class="contato" id="contato">
+        <div class="imagem">
+            <img src="assets/img/advocacia.png" alt="Background Form">
+        </div>
+
+        <div class="formulario">
+            <h1>Entraremos em contato o mais breve possível</h1>
             <form action="https://api.staticforms.xyz/submit" method="post">
-                <div class="form-group">
-                    <label for="tipo-atendimento">Seu nome completo:</label>
-                    <input type="text" name="name" placeholder="Seu nome completo">
-                </div>
-                <div class="form-group">
-                    <label for="tipo-atendimento">Seu email:</label>
-                    <input type="text" name="email" placeholder="Seu email">
-                </div>
-                <div class="form-group">
-                    <label for="tipo-atendimento">Tipo de Atendimento:</label>
-                    <select id="tipo-atendimento" name="$tipo-atendimento">
-                        <option value="Consulta">Consulta</option>
-                        <option value="Trabalhista">Trabalhista</option>
-                        <option value="Cível">Cível</option>
-                        <option value="Família">Família</option>
-                        <option value="Consumidor">Consumidor</option>
-                        <option value="Sucessório">Sucessório</option>
-                    </select>
-                    <br><br>
-                    <label for="tipo-atendimento">Deixe o assunto do contato ou horario disponível para retorno:</label>
-                    <textarea name="message" placeholder="Sua mensagem"></textarea>
-                    <input type="text" name="honeypot" style="display:none">
-                    <input type="hidden" name="accessKey" value="d5b7ce31-d3fc-4609-86ab-cd48e5c1ec0f">
-                    <input type="hidden" name="subject" value="Você recebeu uma mensagem!!!">
-                    <input type="hidden" name="replyTo" value="">
-                    <input type="hidden" name="redirectTo" value="assets/public/sucesso.html">
-                    <input type="submit" value="Enviar">
-                </div>
+                <input type="text" name="name" class="feedback-input" placeholder="Nome">
+                <input type="text" name="email" class="feedback-input" placeholder="Email" />
+                <select name="$area" class="feedback-input">
+                    <option value="" disabled selected hidden>Selecione área de atendimento</option>
+                    <option value="civel">Direito Civel</option>
+                    <option value="trabalhista">Direito Trabalhista</option>
+                    <option value="familia">Direito de Família</option>
+                    <option value="consumidor">Direito do Consumidor</option>
+                    <option value="sucessório">Direito do Sucessório</option>
+                    
+                </select>
+                <textarea name="message" class="feedback-input" placeholder="Mensagem"></textarea>
+                <input type="text" name="honeypot" style="display:none">
+                <input type="hidden" name="accessKey" value="d5b7ce31-d3fc-4609-86ab-cd48e5c1ec0f">
+                <input type="hidden" name="subject" value="Contato de site: Adv Natalia Yamao" />
+                <input type="hidden" name="replyTo" value="@">
+                <input type="hidden" name="redirectTo" value="#">
+                <input type="submit" value="Enviar" />
             </form>
-        </div>
-        <div class="informacoes-contato">
-            <h2>Informações de Contato</h2>
-            <p>
-                <strong><i class="fas fa-map-marker-alt"></i> Endereço: (Clique para ser redirecionado)</strong><br>
-                <a href="https://www.google.com/maps/@-24.0424824,-52.3767008,3a,75y,139.02h,102.66t/data=!3m6!1e1!3m4!1sCM_X32QaQYEnB_MGaLd0xw!2e0!7i16384!8i8192?entry=ttu" style="text-decoration: none;" target="_blank">Av. Capitão Índio Bandeira, nº 1400, Centro<br> CEP: 87300-005, Galeria Antares, S. 03</a> 
-            </p>
-            <p>
-                <strong><i class="fas fa-envelope"></i> Email de Contato:</strong><br>
-                <a href="mailto:adv.nataliayamao@gmail.com" style="text-decoration: none;">adv.nataliayamao@gmail.com</a>
-            </p>
-            <p>
-                <strong><i class="fas fa-phone"></i> Telefone de Contato:</strong><br>
-                <a href="tel:+554497396256" style="text-decoration: none;">(44)9739-6256</a>
-            </p>
         </div>
     </section>
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="contact-info">
-                    <h3>Entre em Contato</h3><br>
-                    <p><a href="mailto:adv.nataliayamao@gmail.com" style="text-decoration: none;">adv.nataliayamao@gmail.com</a></p>
-                    <p>Telefone:<a href="tel:+554497396256" style="text-decoration: none;">(44) 9739-6256</a></p>
-                </div>
-                <div class="social-media">
-                    <h3>Redes Sociais</h3>
-                    <a href="#"><i class="fa-brands fa-facebook fa-bounce"></i>Facebook</a><br>
-                    <a href="#"><i class="fa-brands fa-x-twitter fa-fade"></i>Twitter</a><br>
-                    <a href="https://www.linkedin.com/in/natalia-cristina-yamao-a9a617291/"><i class="fa-brands fa-linkedin fa-fade"></i>Linkedin</a>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 ADV Natália Yamao. Todos os direitos reservados.</p>
-                <p>&reg; Desenvolvido por <a href="mailto:joaoguilherme.deseg@hotmail.com"
-                        style="text-decoration: none;">João Guilherme & Eduardo Shodi</a></p>
-            </div>
+        <div>
+            <p>&copy; Todos os direitos reservados</p>
+            <p>&reg; Desenvolvido por João Guilherme</p>
         </div>
     </footer>
-    <script>
-        function validateForm(form) {
-            // Obtém o valor selecionado no campo "tipo-atendimento"
-            var tipoAtendimento = document.getElementById("tipo-atendimento").value;
-
-            // Adicione qualquer lógica de validação que você deseja aqui
-            // Por exemplo, você pode verificar se o campo "tipo-atendimento" foi selecionado
-
-            if (tipoAtendimento === "") {
-                alert("Por favor, selecione um tipo de atendimento.");
-                return false; // Impede o envio do formulário se a validação falhar
-            }
-
-            // Se tudo estiver válido, o formulário será enviado
-            return true;
-        }
-    </script>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>

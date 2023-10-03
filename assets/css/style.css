@@ -1,334 +1,460 @@
-/* Reset de estilos padrão do navegador */
-body, h1, h2, h3, p, ul, li {
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:wght@100&family=Noto+Serif+JP:wght@200&family=PT+Sans&family=Playfair+Display&family=Roboto+Condensed:wght@300&display=swap');
+
+
+/* 
+font-family: 'Libre Baskerville', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Serif JP', serif;
+font-family: 'Playfair Display', serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+
+* {
+    border: 0;
     margin: 0;
-    padding: 0;
 }
 
-/* Estilos do cabeçalho */
+/******************************************************************************************
+******************************************************************************************
+*****************************************************************************************/
+
 header {
-    background-color: #12161E;
-    color: #CCA571;
-    text-align: center;
-    padding: 20px 0;
+    background-color: #2e0000;
+    display: flex;
+    justify-content: space-between;
 }
 
-#logo img {
-    max-width: 200px; /* Ajuste o tamanho do logotipo conforme necessário */
+.logo1 img {
+    position: relative;
+    height: 45px;
+    top: 3px;
+    left: 10px;
 }
 
-nav ul {
+nav {
+    /* background-color:aquamarine; */
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    word-spacing: 8px;
+}
+
+li {
     list-style: none;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #CCA571;
-}
-/* Estilos para a classe "marcar-horario" */
-.marcar-horario {
-    color: #12161E;
-    background-color: #CCA571;
-}
-
-
-/* Estilos para as seções e conteúdo do site */
-.section {
-    margin-top: 20px;
-    padding: 20px;
-}
-
-/* Estilos para links */
 a {
-    color: #CCA571;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/*===============================================================================================*/ 
-
-/* Estilos para a seção HOME */
-#home {
-    background-color: #F4F5EF;
-    color: #12161E;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centralizar verticalmente e horizontalmente */
-    min-height: 100vh; /* A seção ocupará a altura total da tela */
-    padding: 40px;
-}
-
-
-/* Estilos para as colunas esquerda e direita */
-.column {
-    flex: 1;
-    padding: 20px;
-}
-
-/* Estilos para o botão "Marcar um horário" dentro da seção HOME */
-.marcar-horario {
-    background-color: #CCA571;
-    color: #12161E;
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
     text-decoration: none;
-}
-
-.marcar-horario:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos para a imagem na coluna direita */
-.column.right img {
-    max-width: 100%; /* A imagem terá no máximo 100% da largura da coluna */
-    height: auto; /* A altura será ajustada automaticamente */
-}
-
-/*===============================================================================================*/
-
-/* Estilos para a seção "Áreas de Atuação" */
-#areas-de-atuacao {
-    background-color: #12161E;
-    padding: 20px;
-    height: 100vh; /* Altura igual à altura da tela do usuário */
+    margin: 15px 20px 20px 20px;
+    color: white;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    color: #CCA571;
-}
-
-/* Estilos para os cards de área de atuação */
-.area-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px; /* Largura máxima dos cards */
-    border: 5px #CCA571;
-    
-}
-
-.area-card {
-    flex: 1;
-    padding: 20px;
-    background-color: #12161E;
-    color: #CCA571;
-    border-radius: 5px #CCA571;
-    margin: 10px;
     text-align: center;
-    padding: 20px; /* Espaçamento interno do cartão */
-    border: 2px solid #CCA571; /* Borda do cartão */
-    border-radius: 5px; /* Borda arredondada do cartão */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra do cartão */
-    font-size: 30px;
 }
 
-/* Estilos para os títulos dos cards */
-.area-card h3 {
-    font-size: 25px;
-}
-
-/* Estilos para o texto dos cards */
-.area-card p {
-    font-size: 18px;
-}
-
-
-/*===============================================================================================*/
-
-/* Estilos para a seção de avaliações */
-#avaliacao {
-    text-align: center;
-    /* display: flex; */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* 100% da altura da janela de visualização */
-    background-color: #F4F5EF; /* Cor de fundo da seção */
-    overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
-}
-
-
-#avaliacao h2 {
-    color: #CCA571;;
-}
-
-/* Estilos para os cards de avaliação */
-.testimonial-card {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    display: inline-block;
-    max-width: 300px; /* Tamanho máximo do card */
-}
-
-.testimonial-card img {
-    max-width: 100%;
-    border-radius: 50%; /* Para uma foto de perfil redonda */
-}
-
-.client-name {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.testimonial {
-    margin-top: 10px;
-}
-
-/* Responsividade para os cards de avaliação */
-@media (max-width: 768px) {
-    .testimonial-card {
-        max-width: 100%; /* Cards ocupam a largura total em telas pequenas */
+/* Adicione um estilo para ocultar o ícone do menu em tamanhos maiores */
+@media screen and (min-width: 768px) {
+    #mobile-menu {
+        display: none;
     }
 }
 
-/*===============================================================================================*/
+/* Adicione os estilos do menu para tamanhos menores */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        /* Altura do seu header */
+        left: 0;
+        width: 100%;
+        /* background-color: #2e0000ec; */
+    }
 
-/* Estilos para a seção de formulário e informações de contato */
-.formulario {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch; /* Ajustado para esticar ambos os lados verticalmente */
-    margin-top: 20px;
-    background-color: #CCA571; /* Cor de fundo para a seção */
-    height: 100%;
-    color: #12161E;
+    nav ul li:hover {
+        background-color: #000000;
+        transition: 1s;
+        border-radius: 25%;
+    }
+
+    nav ul.show {
+        display: flex;
+        justify-content: flex-end;
+        z-index: 2;
+        background-color: gray;
+        width: 200px;
+        left: 37%;
+        align-items: baseline;
+        transition: 1.4s;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+        transition: 1.4s;
+    }
+
+    #mobile-menu {
+        display: block;
+        cursor: pointer;
+        color: #6d6946;
+        font-size: 24px;
+        margin: 15px;
+        transition: 1.4s;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #e7b671;
+        margin: 6px 0;
+        transition: 1.6s;
+    }
 }
 
-.formulario-container,
-.informacoes-contato {
-    flex: 1;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #CCA571;
-    
-}
+/*****************************************************************************************
+*************************            HOME            ************************************
+*****************************************************************************************/
 
-/* Estilos para o lado do formulário */
-.formulario-container {
+.home {
     position: relative;
-    background-color: #CCA571; /* Cor de fundo para o formulário */
-    width: 90%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-image {
+    background: black url('../img/h1_hero1.jpg') center/cover no-repeat;
+    /* filter: blur(1px); */
     height: 100%;
-}
-
-/* Estilos para o lado das informações de contato */
-.informacoes-contato {
-    margin: 10px 0; /* Espaçamento entre os parágrafos */
-    display: block; /* Alinha ícone e texto horizontalmente */
-    justify-content: center; /* Centraliza o texto horizontalmente */
-    align-items: center; /* Centraliza o texto verticalmente */
-    background-color: #12161E;
-    color: #CCA571;
-}
-.informacoes-contato h2 {
-    color: #CCA571;
-    text-align: center;
-}
-
-.informacoes-contato p {
-    position: relative;
-    margin: 10px 0; /* Espaçamento entre os parágrafos */
-    align-items: center; /* Centraliza o texto verticalmente */
-    text-align: center;
-    top: 20%;
-}
-
-.informacoes-contato strong {
-    margin-right: 10px; /* Espaço entre o ícone e o texto */
-}
-
-
-/* Estilos para os ícones Font Awesome */
-i {
-    margin-right: 10px;
-    font-size: 20px;
-}
-
-/* Estilos para o formulário e campos do formulário */
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    color: #12161E;
-}
-
-input[type="text"],
-input[type="email"],
-textarea,
-select {
-    width: 98%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button[type="submit"] {
     width: 100%;
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    position: fixed;
+    box-shadow: 324px 300px 300px 300px #500c0c7e inset;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
+.content {
+    position: relative;
+    display: flex;
+    color: #fff;
+    text-align: start;
+    justify-content: flex-start;
+    max-width: 80%;
+    /*Ajuste conforme necessário para manter o conteúdo dentro da largura desejada */
+    padding: 20px;
+    z-index: 1;
+    /* Para sobrepor a imagem de fundo desfocada */
+    top: 10vh;
 }
 
-/*===============================================================================================*/
+.btnHr {
+    background-color: #000000;
+}
 
-/* Estilos para o footer */
-footer {
-    background-color: #12161E;
-    color: #CCA571;
-    padding: 20px 0;
+.left-content {
+    position: relative;
+    padding: 20px;
+    font-size: 48px;
+    flex: 1;
+    top: 15vh;
+    font-family: 'Playfair Display', serif;
+}
+
+.left-content p {
+    font-size: large;
+    font-family: 'Playfair Display', serif;
+}
+
+.left-content a {
+    background-color: #2e0000;
+    width: 200px;
+    float: left;
+    padding: 20px;
+}
+
+.right-content img {
+    background-color: #000000;
+    float: right;
+    height: 60vh;
+    border-radius: 10px;
+    /* Se desejar bordas arredondadas */
+}
+
+/* Adicione regras de estilo para tornar a seção responsiva conforme necessário */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right-content img {
+        margin-top: 20px;
+        /* Adapte conforme necessário */
+    }
+}
+
+
+/*****************************************************************************************
+*****************************     SOBRE       *******************************************
+*****************************************************************************************/
+
+/* Estilos da seção Sobre */
+.about {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Background branco com opacidade 0.8 */
+    padding: 40px 0;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
+    height: 85vh;
     display: flex;
-    justify-content: space-between;
+    font-family: 'Libre Baskerville', serif;
+    z-index: 2;
+}
+
+.tt {
+    font-style: normal;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 48px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    gap: 20px;
+    z-index: 2;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.contact-info, .social-media {
+.about-content img {
+    width: 90vh;
+    height: 80vh;
     flex: 1;
+    /* Ocupa 1 unidade de espaço no flex container */
+    border-radius: 10px 134px 10px 134px;
+    -moz-border-radius: 134px 10px 133px 10px;
+    -webkit-border-radius: 134px 10px 133px 10px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    z-index: 2;
+    opacity: 1;
+    /* Opacidade 1 para a imagem */
 }
 
-.contact-info h3, .social-media h3 {
-    color: #CCA571;
+.presentation {
+    flex: 2;
+    /* Ocupa 2 unidades de espaço no flex container */
+    padding: 20px;
+    width: 200%;
+    font-family: 'Noto Serif JP', serif;
+
 }
 
-.social-media a {
-    margin-right: 10px;
+.presentation p {
+    text-align: left;
+    font-family: 'Noto Serif JP', serif;
 }
 
-.copyright {
-    text-align: center;
-    margin-top: 20px;
+/*****************************************************************************************/
+/****************************      ÁREAS DE ATUAÇÃO       ********************************/
+/*****************************************************************************************/
+
+.areas-de-atuacao {
+    background-color: #b8461d;
+    display: flex;
+    height: 100vh;
+    opacity: 0.6;
+}
+
+
+
+
+/*****************************************************************************************/
+/**********************************  DEPOIMENTOS *****************************************/
+/*****************************************************************************************/
+
+.depoimentos {
+    background-color: #5f3b11;
+    display: flex;
+    height: 100vh;
+    opacity: 0.6;
+}
+
+
+
+
+/*****************************************************************************************/
+/************************************ CONTATO ********************************************/
+/*****************************************************************************************/
+
+.contato {
+    background: #7a1b04;
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    grid-auto-flow: row dense;
+    justify-content: space-around;
+    object-fit: contain;
+}
+
+.imagem {
+    width: 100vh;
+}
+
+.imagem img {
+    object-position: 10% 10%;
+    position: static;
+    display: flex;
+    overflow: hidden;
+    width: 1120px;
+    z-index: -2;
+    filter: blur(5px);
+    opacity: 1;
+    background-color: #000000;
+    object-fit: contain;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Playfair Display', serif;
+    align-items: flex-start;
+    float: right;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    z-index: 1;
+}
+
+.formulario h1 {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    background-color: #2e0000;
+    padding: 30px;
+    border: 5px double black;
+    height: 60vh;
+    max-width: 65%;
+    margin: 50px auto;
+    border-radius: 30px 5px 30px 5px;
+    box-shadow: #2e0000 25px 30px 100px 60px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.feedback-input {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #000000;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.feedback-input:focus {
+    border: 2px solid #000000;
+}
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+    color: #fff;
+}
+
+/* Estilos para o elemento select */
+select {
+    color: black;
+    /* Cor do texto */
+    padding: 8px;
+    /* Espaçamento interno */
+    font-size: 14px;
+    /* Tamanho da fonte */
+}
+
+/* Estilos para as opções dentro do select */
+select option {
+    color: black;
+    /* Cor do texto */
+}
+
+
+[type="submit"] {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background: #000000;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+}
+
+[type="submit"]:hover {
+    background: #2e0000;
+}
+
+/*****************************************************************************************/
+/************************************      Footer    *************************************/
+/*****************************************************************************************/
+
+footer {
+    background-color: #2b0000;
+    height: 10vh;
+}
+
+
+
+/*****************************************************************************************/
+/*********************************      MEDIA QUERIES    *********************************/
+/*****************************************************************************************/
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+    }
+
+    img .home {
+        height: 100vh;
+    }
+
+    .desc {
+        height: 50vh;
+    }
+
+    .container {
+        position: relative;
+        text-align: center;
+        /* display: table-caption; */
+        /* justify-content: center; */
+        top: 40%;
+    }
+
 }

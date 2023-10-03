@@ -1,2 +1,5 @@
 Adicionado link + foto na seção HOME.
 29/09 - João Guilherme
+
+Alteração de Layout
+03/10 João Guilherme

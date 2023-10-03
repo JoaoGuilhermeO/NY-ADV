@@ -269,11 +269,36 @@ a {
 /*****************************************************************************************/
 
 .areas-de-atuacao {
-    background-color: #b8461d;
+    background: rgba(184, 70, 29, 0.6); /* Cor de fundo com opacidade */
     display: flex;
     height: 100vh;
-    opacity: 0.6;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
+
+.parent {
+    /* background: blue; */
+    display: flex;
+    padding: 20px;
+}
+
+.parent li {
+    background-color: rgba(255, 0, 0, 0.6); /* Cor de fundo do li com opacidade */
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    flex-direction: column;
+}
+.more {
+    background: rgb(195, 193, 193);
+}
+
+.more:hover {
+    position: relative;
+    background-color: #500c0c7e;
+}
+
 
 
 

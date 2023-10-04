@@ -206,6 +206,7 @@ a {
     flex-wrap: wrap; /* Faz com que os itens se movam para a próxima linha em telas menores */
     justify-content: center;
     padding: 20px;
+    color: #fff;
 }
 
 .parent li {

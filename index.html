@@ -158,9 +158,9 @@
                     </p>
                 </div>
                 <div class="form-container">
-                    <form action="https://api.staticforms.xyz/submit" method="post">
+                    <form action="https://api.staticforms.xyz/submit" method="post" onsubmit="onFormSubmit();">
                         <input type="text" name="name" class="feedback-input" placeholder="Nome" required>
-                        <input type="text" name="email" class="feedback-input" placeholder="Email" required />
+                        <input type="email" name="email" class="feedback-input" placeholder="Email" required />
                         <select name="$area" class="feedback-input" required>
                             <option value="" disabled selected hidden>Área de atendimento</option>
                             <option value="civel">Direito Civel</option>
@@ -168,16 +168,25 @@
                             <option value="familia">Direito de Família</option>
                             <option value="consumidor">Direito do Consumidor</option>
                             <option value="sucessório">Direito do Sucessório</option>
-        
                         </select>
                         <textarea name="message" class="feedback-input" placeholder="Mensagem" required></textarea>
                         <input type="text" name="honeypot" style="display:none">
                         <input type="hidden" name="accessKey" value="d5b7ce31-d3fc-4609-86ab-cd48e5c1ec0f">
                         <input type="hidden" name="subject" value="Contato de site: Adv Natalia Yamao" />
                         <input type="hidden" name="replyTo" value="@">
-                        <input type="hidden" name="redirectTo" value="#">
+                        <input type="hidden" name="redirectTo" value="https://ny-adv.pages.dev/">
                         <input type="submit" value="Enviar" />
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>Mensagem enviada com sucesso!</p>
+                                <br><br>
+                                <p>Retornaremos o mais rápido possível.</p>
+                            </div>
+                        </div>
                     </form>
+                    
+                    
                 </div>
             </div>
         </div>

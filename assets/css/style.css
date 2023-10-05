@@ -19,7 +19,7 @@ font-family: 'Roboto Condensed', sans-serif;
 ******************************************************************************************
 *****************************************************************************************/
 
-header {
+/* header {
     background-color: #2e0000;
     display: flex;
     justify-content: space-between;
@@ -53,7 +53,7 @@ a {
     justify-content: center; 
     text-align: center;
 }
-
+ */
 
 /*****************************************************************************************
 *************************            HOME            ************************************
@@ -63,6 +63,9 @@ a {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    background: #2e0000;
+    z-index: -3;
+
 }
 
 .background-image {
@@ -89,10 +92,6 @@ a {
     top: 10vh;
 }
 
-.btnHr {
-    background-color: #000000;
-}
-
 .left-content {
     position: relative;
     padding: 20px;
@@ -100,6 +99,7 @@ a {
     flex: 1;
     top: 15vh;
     font-family: 'Playfair Display', serif;
+    border-radius: 30px;
 }
 
 .left-content p {
@@ -112,6 +112,7 @@ a {
     width: 200px;
     float: left;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .right-content img {
@@ -183,7 +184,8 @@ a {
 }
 
 .presentation p {
-    text-align: left;
+    text-align: justify;
+    /* text-align: left; */
     font-family: 'Noto Serif JP', serif;
 }
 
@@ -193,24 +195,30 @@ a {
 
 /* Adapte conforme necessário para atender aos requisitos de design específicos */
 .areas-de-atuacao {
-    background: rgba(184, 70, 29, 0.6); /* Cor de fundo com opacidade */
     display: flex;
     min-height: 100vh;
     text-align: center;
     justify-content: center;
     align-items: center;
+    /* background: #2e0000; */
+    background: rgba(184, 70, 29, 0.4);
+    /* Cor de fundo com opacidade */
+    z-index: -3;
 }
 
 .parent {
     display: flex;
-    flex-wrap: wrap; /* Faz com que os itens se movam para a próxima linha em telas menores */
+    flex-wrap: wrap;
+    /* Faz com que os itens se movam para a próxima linha em telas menores */
     justify-content: center;
     padding: 20px;
     color: #fff;
+    font-size: large;
 }
 
 .parent li {
-    background-color: #4c0000; /* Cor de fundo do li com opacidade */
+    background-color: #4c0000;
+    /* Cor de fundo do li com opacidade */
     border-radius: 30px;
     display: flex;
     flex-direction: row;
@@ -218,17 +226,24 @@ a {
     padding: 20px;
     flex-direction: column;
     width: 300px;
-    min-width: 300px; /* Evita que os itens fiquem muito pequenos em telas pequenas */
-    box-sizing: border-box; /* Considera padding e bordas na largura */
+    min-width: 300px;
+    /* Evita que os itens fiquem muito pequenos em telas pequenas */
+    box-sizing: border-box;
+    /* Considera padding e bordas na largura */
 }
 
-.more {
-    background: rgb(195, 193, 193);
-    margin-top: 10px; /* Adiciona algum espaço entre o texto e o botão */
+.parent li .more {
+    background: #2e0000;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    /* Adiciona algum espaço entre o texto e o botão */
+    border-radius: 10px;
 }
 
 .more:hover {
     background-color: #500c0c7e;
+    border: 1px solid blue;
 }
 
 
@@ -237,7 +252,7 @@ a {
 /*****************************************************************************************/
 
 .depoimentos {
-    background-color:#2b0000cc;
+    background-color: #2b0000cc;
     padding: 60px 0;
     text-align: center;
 }
@@ -251,7 +266,7 @@ a {
 }
 
 .avaliacao {
-    background-color:#510000;
+    background-color: #510000;
     color: #fff;
     padding: 20px;
     margin: 15px;
@@ -265,8 +280,7 @@ a {
     display: block;
     margin-top: 15px;
     font-weight: bold;
-    color: #005151
-    ;
+    color: #cb7169;
 }
 
 
@@ -279,135 +293,129 @@ a {
     position: relative;
 }
 
-.formulario {
-    align-items: center;
-    background: url('../img/advocacia.png') center/cover no-repeat;
-    color: #fff;
+.contato {
     display: flex;
     justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.contato::before {
+    background: url('https://www.ienoticia.com.br/wp-content/uploads/2017/07/assesoria-imprensa-escritorios-advocacia.png') center/cover no-repeat;
+    filter: blur(6px);
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;    right: 0;    bottom: 0;    left: 0;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Para manter o posicionamento adequado do conteúdo */
+    z-index: 1; /* Garante que o conteúdo esteja sobreposto à imagem de fundo */
 }
 
 .endereco {
-    position: relative;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     flex: 1;
-    margin-right: 20px;
-    max-width: 300px;
+    max-width: 400px;
     padding: 20px;
-    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
+.endereco h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.endereco p {
+    margin: 10px 0;
+    color: #fff;
+}
 
 .form-container {
     flex: 1;
+    max-width: 500px;
 }
 
 form {
-    background-color: #2e0000;
-    border: 5px double black;
-    border-radius: 30px 5px 30px 5px;
-    box-shadow: #2e0000 25px 30px 100px 60px;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    margin: 30px auto;
-    padding: 30px;
+    background: #2e0000;
+    /* background: rgba(255, 255, 255, 0.8); */
+    padding: 20px;
+    border-radius: 30px 0 30px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: White double 2px;
 }
 
 .feedback-input {
-    background-color: transparent;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 22px;
-    outline: 0;
-    padding: 13px;
-    transition: all 0.3s;
     width: 100%;
-
-}
-.feedback-input:focus {
-    border: 2px solid #000000;
-}
-form, input, textarea, select {
-    margin: 5px;
-}
-textarea {
-    resize: vertical;
-    line-height: 150%;
-}
-select {
-    color: black;
-    font-size: 14px;
-    padding: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #2e0000;
+    color: white;
+    border: 1px white solid;
 }
 
-select option {
-    color: black;
+select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #2e0000;
+    color: white;
+    border: white 1px solid;
 }
 
 [type="submit"] {
-    background: #0000005d;
-    border: 0;
-    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #2e0000;
     color: white;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    margin: 4px;
-    transition: all 0.3s;
-    width: 100%;
+    border: 1px white groove;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 [type="submit"]:hover {
-    background: #0d2e00;
-    border: 2px solid #39393955;
-} 
-
-/* Estilos do Modal */
+    background-color: #41af1f;
+}
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
-    top: 0;
+    z-index: 1;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
-    background-color: lightgreen;
+    background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    max-width: 400px;
     text-align: center;
-    color: #111;
-    display: flex;
-    align-items: center;
-    align-items: center;
-    justify-content: center;
-}
-.modal-content p {
-    color: black;
-    width: 200px;
-    height: 200px;
 }
 
 .close {
-    color: transparent;
+    color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -416,24 +424,43 @@ select option {
 
 .close:hover,
 .close:focus {
-    color: blue;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Responsividade para telas menores que 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .endereco {
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        max-width: none;
+    }
+}
+
+/* Responsividade para telas menores que 600px */
+@media screen and (max-width: 600px) {
+    .feedback-input,
+    select,
+    textarea,
+    [type="submit"] {
+        width: 100%;
+    }
 }
 
 /*****************************************************************************************/
 /************************************      Footer    *************************************/
 /*****************************************************************************************/
 
-footer {
-    background-color: #260600;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
 
-.container1 {
-    max-width: 800px;
-    margin: 0 auto;
-}
+/* IMPORT */
 
 /*****************************************************************************************/
 /*********************************      MEDIA QUERIES    *********************************/
@@ -445,11 +472,13 @@ footer {
         display: none;
     }
 }
+
 /* Adicione os estilos do menu para tamanhos menores */
 @media screen and (max-width: 768px) {
     header {
         display: flex;
     }
+
     nav ul {
         display: none;
         flex-direction: column;
@@ -460,12 +489,13 @@ footer {
         width: 20ch;
         /* background-color: #2e0000ec; */
     }
-    
+
     nav ul li {
         text-align: center;
         margin: 10px 0;
         transition: 1.4s;
     }
+
     nav ul li:hover {
         display: flex;
         background-color: #000000;
@@ -485,7 +515,7 @@ footer {
         /* align-items: baseline; */
         transition: 1.0s;
     }
-    
+
 
     #mobile-menu {
         display: block;
@@ -508,17 +538,39 @@ footer {
 /* HOME */
 @media screen and (max-width: 768px) {
     .content {
+        /* background:rgb(0, 0, 0); */
         position: relative;
         display: flex;
         flex-direction: column;
-        top: -10%;
-        height: 100vh;
+        height: 90vh;
         left: 5%;
-        text-align: center;
+        top: 1%;
     }
     
     .content a {
         position: relative;
+    }
+    
+    .left-content {
+        display: flex;
+        flex-direction: column;
+        /* background: #2e0000; */
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        top: -3%;
+    }
+
+    .left-content p {
+        font-size:medium;
+        font-family: 'Playfair Display', serif;
+    }
+    .left-content h3{ 
+        font-size: 35px;
+    }
+    .left-content h1 {
+        font-size: 44px;
+        font-family: 'Playfair Display', serif;
     }
 }
 
@@ -531,6 +583,7 @@ footer {
         text-align: center;
         height: 100vh;
     }
+
     .about-content {
         position: relative;
         display: flex;
@@ -538,18 +591,21 @@ footer {
         font-weight: bold;
         flex-direction: column;
     }
+
     .about-content img {
         height: 350px;
         width: 200px;
     }
-    .presentation{
+
+    .presentation {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 720px;
     }
+
     .presentation p {
-        text-align: center;
+        text-align: justify;
         margin: 10px;
         border: #000000 1px solid;
     }
@@ -560,10 +616,11 @@ footer {
     .parent li {
         margin-bottom: 20px;
     }
+
     .more {
         background: rgb(195, 193, 193);
     }
-    
+
     .more:hover {
         position: relative;
         background-color: #500c0c7e;
@@ -571,19 +628,38 @@ footer {
 }
 
 /* Formulário */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .formulario {
+        display: flex;
+        flex-direction: column !important;
         flex-direction: column;
         align-items: stretch;
         height: auto;
     }
-    form, input, textarea, select {
-        margin: 5px;
+
+    .feedback-input {
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: white;
+        font-family: 'Playfair Display', serif;
+        font-weight: 500;
+        outline: 0;
+        padding: 9px;
+        transition: all 0.3s;
+    }
+    .endereco {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        background-color: #000000;
+        margin-right: 0;
     }
 
-    .endereco {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-}
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+}*/

@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:wght@100&family=Noto+Serif+JP:wght@200&family=PT+Sans&family=Playfair+Display&family=Roboto+Condensed:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    z-index: -2;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/img/juridico1.jpg') ;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home {
+    background: url('../assets/img/advocacia.png') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /*height: 100vh;*/ /* Garante que a imagem de fundo cubra toda a tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo {
+    background-color: rgba(255, 255, 255, 0.9); /* Ofuscação - ajuste o último valor para controlar a opacidade */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: flex-start;
+    z-index: 1;
+}
+
+.tema {
+    color: #000;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+sub {
+    font-size: 1em;
+    display: block;
+}
+
+.conteudo .tema {
+    box-shadow: #000000 20px 20px 30px 20px;
+    padding: 10px;
+    font-size: 48px;
+    position: relative;
+}
+/* Conteudo do blog */
+
+.conteudo-blog{
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    /* background-color: #000; */
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: #2e0000 10px 20px 30px 20px;
+    z-index: 1;
+}
+article {
+    line-height: 1.6;
+    text-align: justify;
+}
+article img {
+    width: 100%;
+}
+article .publish {
+    font-size: 14px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .tema h1 {
+        /* background-color: #2e0000; */
+        font-size: larger;
+        color: #fff;
+    }
+    sub {
+        /* background-color: #6d6946; */
+        font-size: 35px;
+        color: #fff;
+    }
+    .conteudo {
+        background-color: rgba(83, 22, 11, 0.9); /* Ofuscação - ajuste o último valor para controlar a opacidade */
+        padding: 20px;
+    }
+    article {
+        color: #fff;
+    }
+    .conteudo-blog{
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: rgba(83, 22, 11, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: #2e0000 10px 20px 30px 20px;
+        z-index: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    #mobile-menu {
+        display: none;
+    }
+}
+
+/* Adicione os estilos do menu para tamanhos menores */
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        z-index: 2;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 20ch;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+        transition: 1.4s;
+    }
+
+    nav ul li:hover {
+        display: flex;
+        background-color: #000000;
+        transition: 1s;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    nav ul.show {
+        display: flex;
+        justify-content: center;
+        z-index: 4;
+        background-color: rgb(110, 40, 0);
+        width: 200px;
+        text-align: center;
+        transition: 1.0s;
+    }
+
+
+    #mobile-menu {
+        display: block;
+        cursor: pointer;
+        color: #6d6946;
+        font-size: 24px;
+        margin: 15px;
+        transition: 1.4s;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #e7b671;
+        margin: 6px 0;
+        transition: 1.6s;
+    }
+}

@@ -50,6 +50,10 @@ sub {
     display: block;
 }
 
+article h1 {
+    text-align: initial;
+}
+
 .conteudo .tema {
     box-shadow: #000000 20px 20px 30px 20px;
     padding: 10px;
@@ -89,7 +93,7 @@ article .publish {
     }
     sub {
         /* background-color: #6d6946; */
-        font-size: 35px;
+        font-size: 13px;
         color: #fff;
     }
     .conteudo {
@@ -109,31 +113,8 @@ article .publish {
         box-shadow: #2e0000 10px 20px 30px 20px;
         z-index: 1;
     }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (min-width: 768px) {
     #mobile-menu {

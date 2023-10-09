@@ -3,3 +3,6 @@ Adicionado link + foto na seção HOME.
 
 Alteração de Layout
 03/10 João Guilherme
+
+Alterado Advogada para adv
+Eduardo Shodi

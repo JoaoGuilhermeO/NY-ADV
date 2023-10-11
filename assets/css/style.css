@@ -31,13 +31,11 @@ font-family: 'Roboto Condensed', sans-serif;
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background: #2e0000;
-    z-index: -3;
-
+    background: #2e00004f;
 }
 
 .background-image {
-    background: black url('../img/h1_hero1.jpg') center/cover no-repeat;
+    background: blue url('../img/h1_hero1.jpg') center/cover no-repeat;
     filter: blur(4px);
     height: 100%;
     width: 100%;
@@ -83,13 +81,6 @@ font-family: 'Roboto Condensed', sans-serif;
     border-radius: 10px;
 }
 
-.right-content img {
-    background-color: #000000;
-    float: right;
-    height: 60vh;
-    border-radius: 10px;
-}
-
 /*****************************************************************************************
 *****************************     SOBRE       *******************************************
 *****************************************************************************************/
@@ -101,6 +92,7 @@ font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .container {
@@ -127,7 +119,7 @@ font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .about-content img {
@@ -139,7 +131,6 @@ font-family: 'Roboto Condensed', sans-serif;
     -webkit-border-radius: 134px 10px 133px 10px;
     border: 1px solid #000000;
     border-radius: 8px;
-    z-index: 2;
     opacity: 1;
 }
 
@@ -167,8 +158,9 @@ font-family: 'Roboto Condensed', sans-serif;
     justify-content: center;
     align-items: center;
     background: rgba(184, 70, 29, 0.4);
+    /* background-color: #2e00004f; */
     /* Cor de fundo com opacidade */
-    z-index: -3;
+    z-index: 3;
 }
 
 .parent {
@@ -266,7 +258,7 @@ font-family: 'Roboto Condensed', sans-serif;
 .contato::before {
     background: url('https://www.ienoticia.com.br/wp-content/uploads/2017/07/assesoria-imprensa-escritorios-advocacia.png') center/cover no-repeat;
     filter: blur(6px);
-    z-index: -1;
+    /* z-index: -1; */
     content: "";
     position: absolute;
     top: 0;    right: 0;    bottom: 0;    left: 0;
@@ -280,7 +272,7 @@ font-family: 'Roboto Condensed', sans-serif;
     padding: 20px;
     box-sizing: border-box;
     position: relative; /* Para manter o posicionamento adequado do conteúdo */
-    z-index: 1; /* Garante que o conteúdo esteja sobreposto à imagem de fundo */
+    /*z-index: 1;*/ /* Garante que o conteúdo esteja sobreposto à imagem de fundo */
 }
 
 .endereco {
@@ -355,7 +347,7 @@ select, textarea {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    /* z-index: 1; */
     left: 0;
     top: 0;
     width: 100%;
